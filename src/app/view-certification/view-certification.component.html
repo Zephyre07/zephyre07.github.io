@@ -1,1 +1,22 @@
 <p>view-certification works!</p>
+<div class="card-container">
+
+    <table class="styled-table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th>
+          
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let currency of currencies; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          
+          <td>{{ currency.name }}</td>
+          <td>{{ currency.createdDate }}</td>
+        </tr>
+        </tbody>
+      </table>
+</div>

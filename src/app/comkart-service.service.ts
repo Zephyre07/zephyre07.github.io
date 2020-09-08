@@ -15,6 +15,7 @@ const httpOptions = {
 export class ComkartServiceService {
 
   private _currencyUrl='/comKart/currencies';
+  private _currencyUrlJson='./data/jsons/currency.json';
   
 
   constructor(private _http: HttpClient)
@@ -26,8 +27,8 @@ export class ComkartServiceService {
     onView():Observable<ICurrency[]>{
       //console.log(currency);
       
-      return this._http.get<ICurrency[]>(this._currencyUrl);
-     // return this._http.get<ICurrency>(this._customerUrl,currency,httpOptions);
+      //return this._http.get<ICurrency[]>(this._currencyUrl);
+      return this._http.get<ICurrency[]>(this._currencyUrlJson);
     }
 
 }
