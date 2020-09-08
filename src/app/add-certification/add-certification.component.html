@@ -7,19 +7,23 @@
 
       <div class="form-group">
         <label for="power">Certification Name</label>
-        
-        <input type="text" class="form-control" name="certificationName" size="20" [(ngModel)]='certificateList.certificateName'
-                   pattern="[a-zA-Z]{3,}" required>
+       
+        <select class="form-control" name="certiName" [(ngModel)]='certificateList.certificateName'>
+          <option *ngFor="let name of certificateNames">{{name.key}}</option>
+        </select>
 
         <label for="power">Technology</label>
 
-        <input type="text" class="form-control" name="technology" size="20" [(ngModel)]='certificateList.techName'
-                   pattern="[a-zA-Z]{3,}" required>
+       
+        <select class="form-control" name="technology" [(ngModel)]='certificateList.techName'>
+          <option *ngFor="let tech of technologies">{{tech.key}}</option>
+        </select>
 
         <label for="power">Provider</label>
 
-        <input type="text" class="form-control" name="provider" size="20" pattern="[a-zA-Z]{3,}" 
-        [(ngModel)]='certificateList.provider' required>
+        <select class="form-control" name="provider" [(ngModel)]='certificateList.provider'>
+          <option *ngFor="let provider of providers">{{provider.key}}</option>
+        </select>
 
         <label for="power">Certification Date</label>
 

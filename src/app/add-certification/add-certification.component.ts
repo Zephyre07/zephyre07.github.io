@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ICertificate } from '../model/ICertificate';
 import { ICertificateList } from '../model/ICertificateList';
+import certificateFields from '../jsons/certificateFields.json'
+
 
 @Component({
   selector: 'app-add-certification',
@@ -12,6 +14,9 @@ export class AddCertificationComponent implements OnInit {
   //constructor(private _customerService:CustomerService) { }
 
   displayTitle:string='Certification Form';
+  technologies:any[]=[];
+  certificateNames:any[]=[];
+  providers:any[]=[];
 
   certificateList:ICertificateList={
     techName:"",
@@ -38,6 +43,15 @@ export class AddCertificationComponent implements OnInit {
   // };
 
   ngOnInit() {
+    this.loadData();
+  }
+
+  loadData():void{
+    this.technologies=certificateFields.techName;
+    console.log(this.technologies);
+    this.certificateNames=certificateFields.certificationName;
+    this.providers=certificateFields.provider;
+
   }
 
   onSubmit(customer:ICertificateList):void{

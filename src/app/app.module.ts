@@ -11,6 +11,7 @@ import { ViewCertificationComponent } from './view-certification/view-certificat
 import { WelcomeComponent } from './welcome/welcome.component';
 import { StatsCertificationComponent } from './stats-certification/stats-certification.component';
 import { ComkartServiceService } from './comkart-service.service';
+import { TestConnectionComponent } from './test-connection/test-connection.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ComkartServiceService } from './comkart-service.service';
     AddCertificationComponent,
     ViewCertificationComponent,
     WelcomeComponent,
-    StatsCertificationComponent
+    StatsCertificationComponent,
+    TestConnectionComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { ComkartServiceService } from './comkart-service.service';
       {path: 'addcertificate', component: AddCertificationComponent},
       {path: 'viewcertificate' , component: ViewCertificationComponent},
       {path: 'stats-certificate', component: StatsCertificationComponent },
+      {path: 'test-connection', component: TestConnectionComponent },
       {path: 'welcome', component: WelcomeComponent },
       {path: '', redirectTo:'welcome', pathMatch:'full'},
       {path:'**', redirectTo:'welcome', pathMatch:'full'}
