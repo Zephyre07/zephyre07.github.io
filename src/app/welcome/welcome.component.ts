@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
 
   public pageTitle: string = 'HOME';
+  public imagePath: string= 'assets/images/home.jpg';
   constructor() { }
-s
+
   ngOnInit(): void {
   }
 
