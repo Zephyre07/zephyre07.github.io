@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICertificate } from '../model/ICertificate';
+import { ICertificateList } from '../model/ICertificateList';
 
 @Component({
   selector: 'app-add-certification',
@@ -12,22 +13,34 @@ export class AddCertificationComponent implements OnInit {
 
   displayTitle:string='Certification Form';
 
-  certificate:ICertificate={
-
-    resourceName:"",
-    certificationName:"",
-    certificationDate:new Date,
+  certificateList:ICertificateList={
+    techName:"",
     provider:"",
-    status:"",
-    validTill:new Date,
-    lastupdate:new Date
-
+    certificateName:"",
+    certificationDate:null,
+    validFrom:null,
+    validTo:null
   };
+
+  // certificate:ICertificate={
+
+  //   employeeId:0,
+  //   employeeName:"",
+  //   resourceUserId:"",
+  //   empStatus:"",
+  //   mobileNumber:"",
+  //   capgeminiEmailId: "",
+  //   nordeaEmailId:"",
+  //   ggId:"",
+  //   certificationList:this.certificateList,
+  //   responseMessage:"",
+  //   responseCode:""
+  // };
 
   ngOnInit() {
   }
 
-  onSubmit(customer:ICertificate):void{
+  onSubmit(customer:ICertificateList):void{
     console.log(customer);
     //this._customerService.onRegister(customer).subscribe();
   }

@@ -23,6 +23,22 @@
             "certificationDate": "2019-08-08",
             "validFrom": "2019-08-08",
             "validTo": null
+        },
+        {
+            "techName": "JAVA",
+            "provider": "ORACLE",
+            "certificateName": "1zo-809",
+            "certificationDate": "2019-08-08",
+            "validFrom": "2019-08-08",
+            "validTo": null
+        },
+        {
+            "techName": "JAVA",
+            "provider": "ORACLE",
+            "certificateName": "1zo-809",
+            "certificationDate": "2019-08-08",
+            "validFrom": "2019-08-08",
+            "validTo": null
         }
     ],
     "responseMessage": "Success",

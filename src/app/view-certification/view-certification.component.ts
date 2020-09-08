@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ComkartServiceService } from '../comkart-service.service';
 import { ICurrency } from '../model/ICurrency';
 import currJson from '../jsons/currency.json'
+import certJson from '../jsons/certificate.json'
 
 @Component({
   selector: 'app-view-certification',
@@ -14,15 +15,17 @@ export class ViewCertificationComponent implements OnInit {
 
   errorMessage:String;
   currencies: ICurrency[]=[];
+  name:string=certJson.employeeName;
+  numberOfCertification:number=certJson.certificationList.length;
 
   ngOnInit(): void {
     console.log("In ngOnit");
-    //this.onView();
+    this.onView();
     this.load();
   }
 
   load():void{
-    this.currencies=currJson;
+    this.currencies=certJson.certificationList;
     console.log("JSONS:"+ this.currencies);
   }
 

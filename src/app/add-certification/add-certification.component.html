@@ -1,78 +1,43 @@
 <div class='panel panel-primary'>
  
     <div class='panel-heading'>
-       <h3> {{displayTitle}}</h3>
+       <h3 class="heading-h3"> {{displayTitle}}</h3>
     </div>
     <div class="panel-body" >
-      <form name=f2 method="post" action="../welcome" >
-        <div id="register">
-        
-        <hr>
-          <div class="tablecnt">
-            <table >
-              
-              <tr>
-                <td>Certification Name:</td>
-                <td>
-                  <input type="text" name="certificationName" size="20" [(ngModel)]='certificate.certificationName'
-                   pattern="[a-zA-Z]{3,}" required>
-                  
-                </td>
-                <td>
-                  <div id="NameErrMsg" class="errMsg"></div>
-                </td>
-              </tr>
-              
-              <tr>
-                <td>Provider:</td>
-                <td>
-                  <input type="text" name="provider" size="20" pattern="[a-zA-Z]{3,}" 
-                  [(ngModel)]='certificate.provider' required>
-                </td>
-                <td>
-                  <div id="ProviderErrMsg" class="errMsg"></div>
-                </td>
-              </tr>
-              
-              <tr>
-                <td>Certification Date:</td>
-                <td>
-                  <input type="date" name="certificationDate"  [(ngModel)]='certificate.certificationDate'
-                  placeholder="dd-MMM-yyyy" required>
-                </td>
-                <td>
-                  <div id="certifDateErrMsg" class="errMsg"></div>
-                </td>
-              </tr>
 
-              <tr>
-                <td>Valid Till Date:</td>
-                <td>
-                  <input type="date" name="validtill"  [(ngModel)]='certificate.validTill'
+      <div class="form-group">
+        <label for="power">Certification Name</label>
+        
+        <input type="text" class="form-control" name="certificationName" size="20" [(ngModel)]='certificateList.certificateName'
+                   pattern="[a-zA-Z]{3,}" required>
+
+        <label for="power">Technology</label>
+
+        <input type="text" class="form-control" name="technology" size="20" [(ngModel)]='certificateList.techName'
+                   pattern="[a-zA-Z]{3,}" required>
+
+        <label for="power">Provider</label>
+
+        <input type="text" class="form-control" name="provider" size="20" pattern="[a-zA-Z]{3,}" 
+        [(ngModel)]='certificateList.provider' required>
+
+        <label for="power">Certification Date</label>
+
+        <input type="date" class="form-control" name="certificationDate"  [(ngModel)]='certificateList.certificationDate'
+        placeholder="dd-MMM-yyyy" required>
+
+        <label for="power">Valid Till</label>
+        
+        <input type="date" class="form-control" name="validtill"  [(ngModel)]='certificateList.validTo'
                   placeholder="dd-MMM-yyyy" required>
-                </td>
-                <td>
-                  <div id="validTillDateErrMsg" class="errMsg"></div>
-                </td>
-              </tr>
-              <tr><td><span></span></td> </tr>
-              <tr><td><span></span></td> </tr>
-              <tr>
-                <td></td> 
-                
-                
-                <td>
-                  <input type="submit" (click)='onSubmit(certificate)'  value="Add">
+
                   
-                </td>
-              </tr>
-              
-              
-            </table>
-          
-          </div>
-        </div>
-        </form>
+                  <!-- <input type="submit" class="button" (click)='onSubmit(certificateList)'  value="Add"> -->
+                  <button class="button" style="vertical-align:middle" (click)='onSubmit(certificateList)'><span>Add </span></button>
+
+      </div>
+      
+    
   </div>
   </div>
   
