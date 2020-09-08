@@ -10,6 +10,7 @@ import { AddCertificationComponent } from './add-certification/add-certification
 import { ViewCertificationComponent } from './view-certification/view-certification.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { StatsCertificationComponent } from './stats-certification/stats-certification.component';
+import { ComkartServiceService } from './comkart-service.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { StatsCertificationComponent } from './stats-certification/stats-certifi
 
   ])
   ],
-  providers: [],
+  providers: [ComkartServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
